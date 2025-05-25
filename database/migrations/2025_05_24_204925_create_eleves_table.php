@@ -11,10 +11,11 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('eleves', function (Blueprint $table) {
-            $table->integer('id')->autoIncrement()->primary();
+            $table->id();
+            // $table->integer('id')->autoIncrement()->primary();
             $table->string('nom');
             $table->string('prenom');
-            $table->foreignID('club_id')->constrained('clubs')->onDelete('cascade');
+            $table->foreignId('club_id')->constrained('clubs')->onDelete('cascade');
             $table->timestamps();
         });
     }

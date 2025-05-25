@@ -11,8 +11,9 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('clubs', function (Blueprint $table) {
-            $table->integer('id')->autoIncrement()->primary();
-            $table->string('name');
+            $table->id();
+            // $table->integer('id')->autoIncrement()->primary();
+            $table->string('nom');
             $table->timestamps();
         });
     }

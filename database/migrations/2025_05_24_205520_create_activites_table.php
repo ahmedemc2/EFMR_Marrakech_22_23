@@ -11,7 +11,8 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('activites', function (Blueprint $table) {
-            $table->integer('id')->autoIncrement()->primary();
+            $table->id();
+            // $table->integer('id')->autoIncrement()->primary();
             $table->string("description");
             $table->date("dateDebut");
             $table->integer("nombreJours");
