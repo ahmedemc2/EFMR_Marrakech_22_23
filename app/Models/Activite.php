@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Activite extends Model
 {
+
+    protected $fillable = ['description', 'dateDebut', 'nombreJours'];
     public function eleves()
     {
         return $this->belongsToMany(Eleve::class);

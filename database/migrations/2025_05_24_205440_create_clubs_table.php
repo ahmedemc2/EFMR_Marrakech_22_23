@@ -10,6 +10,7 @@ return new class extends Migration {
      */
     public function up(): void
     {
+        Schema::disableForeignKeyConstraints();
         Schema::create('clubs', function (Blueprint $table) {
             $table->id();
             // $table->integer('id')->autoIncrement()->primary();

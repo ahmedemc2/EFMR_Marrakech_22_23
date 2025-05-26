@@ -10,11 +10,11 @@ return new class extends Migration {
      */
     public function up(): void
     {
+        Schema::disableForeignKeyConstraints();
         Schema::create('activite_eleve', function (Blueprint $table) {
             $table->id();
             $table->foreignId('activite_id')->constrained("activites")->onDelete('cascade');
             $table->foreignId('eleve_id')->constrained('eleves')->onDelete("cascade");
-            $table->timestamps();
         });
     }
 
