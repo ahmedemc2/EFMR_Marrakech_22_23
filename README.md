@@ -20,3 +20,9 @@
 <b>php artisan migrate --seed</b>
 <p>Si tu as déjà ta base de données existe et rempli, utilise :</p>
 <b>php artisan migrate:fresh --seed</b>
+
+# Question 6
+
+<p>php artisan make:controller EleveController --resource</p>
+<p>php artisan make:controller ClubController --resource</p>
+<p>php artisan make:controller ActiviteController --resource</p>
